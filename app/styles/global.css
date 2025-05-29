@@ -10,3 +10,16 @@ body.dark {
   background: #1e293b;
   color: #f1f5f9;
 }
+
+/* Make forms look nice on mobile */
+form {
+  max-width: 100%;
+}
+@media (max-width: 640px) {
+  .sm\:w-64 {
+    width: 100% !important;
+  }
+  .sm\:p-6 {
+    padding: 1rem !important;
+  }
+}

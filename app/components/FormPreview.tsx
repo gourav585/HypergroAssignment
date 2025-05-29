@@ -8,7 +8,7 @@ export default function FormPreview() {
     <form className="space-y-6">
       {fields.length === 0 && <div className="text-gray-400">No fields yet.</div>}
       {fields.map((field, idx) => (
-        <div key={field.id} className="relative border p-3 rounded">
+        <div key={field.id} className="relative border p-3 rounded bg-white dark:bg-gray-800 shadow-sm">
           <button
             type="button"
             className="absolute top-2 right-2 text-xs bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
@@ -60,7 +60,7 @@ export default function FormPreview() {
         </div>
       ))}
       {fields.length > 0 && (
-        <button className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded" type="submit">
+        <button className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded w-full sm:w-auto" type="submit">
           Submit
         </button>
       )}

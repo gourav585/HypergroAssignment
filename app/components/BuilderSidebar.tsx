@@ -17,7 +17,7 @@ export default function BuilderSidebar() {
   const addField = useFormBuilderStore((s) => s.addField);
 
   return (
-    <div className="w-64 bg-gray-50 dark:bg-gray-800 p-6 min-h-screen">
+    <aside className="w-full sm:w-64 bg-gray-50 dark:bg-gray-800 p-4 sm:p-6 min-h-screen flex-shrink-0">
       <div className="font-bold mb-4">Sidebar</div>
       <ThemeSwitcher />
       <div className="mt-8">
@@ -26,7 +26,7 @@ export default function BuilderSidebar() {
           {FIELD_TYPES.map(f => (
             <button
               key={f.type}
-              className="rounded bg-blue-500 text-white px-3 py-1 hover:bg-blue-600"
+              className="rounded bg-blue-500 text-white px-3 py-1 hover:bg-blue-600 transition"
               onClick={() =>
                 addField({
                   id: randomId(),
@@ -44,6 +44,6 @@ export default function BuilderSidebar() {
           ))}
         </div>
       </div>
-    </div>
+    </aside>
   );
 }
